@@ -1,0 +1,105 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --general-margin: 30px;
+  --general-padding: 10px;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+nav {
+  background-color: red;
+  padding: 2em;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  gap: 3em;
+}
+
+.container {
+  display: flex;
+  padding-bottom: calc(100px + var(--general-margin));
+}
+
+main {
+  width: 70%;
+  padding: var(--general-padding);
+}
+
+main article {
+  margin: var(--general-margin);
+  padding: var(--general-padding);
+  display: flex;
+  gap: 30px;
+  background-color: blueviolet;
+}
+
+.container h1,
+.container h2,
+.container h3 {
+  text-align: center;
+  margin: var(--general-margin);
+}
+
+aside {
+  width: 30%;
+  padding: var(--general-padding);
+}
+
+aside article {
+  margin: var(--general-margin);
+  border: 1px solid black;
+  padding: var(--general-padding);
+}
+
+footer {
+  padding: var(--general-margin) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 60px;
+  background-color: #011c39;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: red;
+  text-decoration: underline;
+}

@@ -67,7 +67,7 @@ aside article {
 }
 
 footer {
-  padding: var(--general-margin) 0;
+  padding: var(--general-margin);
   display: flex;
   flex-wrap: wrap;
   padding: 0 10px;
@@ -150,12 +150,12 @@ footer a:hover {
   }
 
   .container {
-    padding-bottom: calc(200px);
+    padding-bottom: calc(150px);
   }
 
   footer {
     position: fixed;
     bottom: 0;
-    height: 200px;
+    height: 150px;
   }
 }

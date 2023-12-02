@@ -1,65 +1,56 @@
 * {
-  border: 0;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
   --general-margin: 30px;
   --general-padding: 10px;
+  --background-color: #011c39;
 }
 
 body {
+  border: 0;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
+  font-family: 'Segoe UI';
   position: relative;
 }
 
-nav {
-  background-color: red;
-  padding: 2em;
-  padding-left: 40px;
-  padding-right: 40px;
+.row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav h2 {
-  color: white;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: black;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: end;
-  gap: 3em;
+  flex-wrap: wrap;
 }
 
 .container {
-  display: flex;
-  padding-bottom: calc(100px + var(--general-margin));
+  padding-top: 70px;
 }
 
-main {
-  width: 70%;
-  padding: var(--general-padding);
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  background-image: url('https://picsum.photos/400/200');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 main article {
   margin: var(--general-margin);
   padding: var(--general-padding);
-  display: flex;
-  gap: 30px;
-  background-color: blueviolet;
+}
+
+main article p {
+  padding: var(--general-padding);
+}
+
+main>div>p {
+  padding: var(--general-padding);
 }
 
 .container h1,
@@ -70,8 +61,7 @@ main article {
 }
 
 aside {
-  width: 30%;
-  padding: var(--general-padding);
+  margin-bottom: 20px;
 }
 
 aside article {
@@ -83,15 +73,13 @@ aside article {
 footer {
   padding: var(--general-margin) 0;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
   align-items: center;
   column-gap: 60px;
-  background-color: #011c39;
+  background-color: var(--background-color);
   color: white;
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  height: 100px;
 }
 
 footer a {
@@ -102,4 +90,76 @@ footer a {
 footer a:hover {
   color: red;
   text-decoration: underline;
+}
+
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 480px) {
+  footer {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+
+  .container {
+    padding-bottom: calc(200px);
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    height: 200px;
+  }
 }
